@@ -18,14 +18,26 @@
 # (Required) Task 1
 # TODO Ask user for their birth year
 from time import sleep
-print()
-print ("Do you want to know more about yourself? ")
-thyhnguyen = int(input( "If yes, can you tell me when were you born? [Your year of birth needs to be between 2000 and 2011] "))
-sleep(3)
+print ("\nDo you want to know more about yourself? ")
+thyhnguyen = (input( "If yes, can you tell me when were you born? [Your year of birth needs to be between 2000 and 2011] "))
+sleep(1)
 # TODO Check the year using if conditionals, and print the correct animal for that year.
 # See the a01_pets.py for examples
+
+#This is my third way to solve the problem
 print()
 thy = ["Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit"]
+thuy = int(thyhnguyen[-2:])
+
+if 2000 <= int(thyhnguyen) <= 2011:
+    print("What a surprise! Your Chinese Zodiac animal is a", thy[thuy], ".")
+else:
+    print("Can you please enter the birth year between 2000 and 2011? \n Re-enter your birth year to see the surprise!")
+sleep(3)
+
+"""
+This is my first way to solve the problem:
+
 if thyhnguyen == 2000:
     print ("What a surprise! Your Chinese Zodiac animal is a" , thy[0],".")
 elif thyhnguyen == 2001:
@@ -52,14 +64,29 @@ elif thyhnguyen == 2011:
     print ("What a surprise! Your Chinese Zodiac animal is a" , thy[11],".")
 else:
     print("Can you please enter the birth year between 2000 and 2011? \n Re-enter your birth year to see the surprise!")
+"""
+
 ######################################################################
 # (Required) Task 2
 # TODO Ask the user for their friend's birth year
-print()
-print ("Now, you have known your Chinese Zodiac animal. What about your friends? \n Are you curious about your friend's Chinese Zodiac animal?")
+
+print ("\nNow, you have known your Chinese Zodiac animal. What about your friends? \n Are you curious about your friend's Chinese Zodiac animal?")
 birth_year = (input("What is your friend's year of birth? [Make sure that you remember to enter a year between 2000 and 2011] "))
 print()
-yearr = int(birth_year[-2:])
+    # TODO Similar to above, check your friend's year using if conditionals, and print the correct animal for that year
+
+# This is my fourth way to solve this problem
+if 2000 <= int(thyhnguyen) <= 2011:
+    for i in range(12):
+        if i == thuy:
+            print("Your friend's Chinese Zodiac animal is a", thy[i])
+        if i != thuy:
+            i+=1
+else:
+    print("Did you remember to enter a birth year between 2000 and 2011? \n Please try again!")
+
+"""
+This is my second way to solve this problem
 if yearr == 00:
     print ("Your friend's Chinese Zodiac animal is a Dragon.")
 elif yearr == 1:
@@ -87,8 +114,7 @@ elif yearr == 11:
 else:
     print("Did you remember to enter a birth year between 2000 and 2011? \n Please try again!")
 
-    # TODO Similar to above, check your friend's year using if conditionals, and print the correct animal for that year
-
+"""
 
 ######################################################################
 # (Optional) Task 3

@@ -26,7 +26,7 @@ num_lbs = int(input("How many lbs of chocolate in a box? \n"))
 
 # Section 2: Computation Section
 lbs_choc = num_boxes * num_lbs
-oz_per_lb = 16
+oz_per_lb = .16
 oz_choc = lbs_choc * oz_per_lb
 
 
