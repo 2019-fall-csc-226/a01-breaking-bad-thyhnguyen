@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your name
-# Username: heggens             TODO: Change this to your username
+# Author: Thy H. Nguyen      TODO: Change this to your name
+# Username: nguyent2         TODO: Change this to your username
 #
 # Assignment: A01
 #
@@ -17,12 +17,41 @@
 ######################################################################
 # (Required) Task 1
 # TODO Ask user for their birth year
-
-
+from time import sleep
+print()
+print ("Do you want to know more about yourself? ")
+thyhnguyen = int(input( "If yes, can you tell me when were you born? [Your year of birth needs to be between 2000 and 2011] "))
+sleep(3)
 # TODO Check the year using if conditionals, and print the correct animal for that year.
 # See the a01_pets.py for examples
-
-
+print()
+thy = ["Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit"]
+if thyhnguyen == 2000:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[0],".")
+elif thyhnguyen == 2001:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[1],".")
+elif thyhnguyen == 2002:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[2],".")
+elif thyhnguyen == 2003:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[3],".")
+elif thyhnguyen == 2004:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[4],".")
+elif thyhnguyen == 2005:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[5],".")
+elif thyhnguyen == 2006:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[6],".")
+elif thyhnguyen == 2007:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[7],".")
+elif thyhnguyen == 2008:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[8],".")
+elif thyhnguyen == 2009:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[9],".")
+elif thyhnguyen == 2010:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[10],".")
+elif thyhnguyen == 2011:
+    print ("What a surprise! Your Chinese Zodiac animal is a" , thy[11],".")
+else:
+    print("Can you please enter the birth year between 2000 and 2011? \n Re-enter your birth year to see the surprise!")
 ######################################################################
 # (Required) Task 2
 # TODO Ask the user for their friend's birth year
