@@ -76,11 +76,13 @@ print()
     # TODO Similar to above, check your friend's year using if conditionals, and print the correct animal for that year
 
 # This is my fourth way to solve this problem
-if 2000 <= int(thyhnguyen) <= 2011:
+thyy = int(birth_year[-2:])
+
+if 2000 <= int(birth_year) <= 2011:
     for i in range(12):
-        if i == thuy:
+        if i == thyy:
             print("Your friend's Chinese Zodiac animal is a", thy[i])
-        if i != thuy:
+        if i != thyy:
             i+=1
 else:
     print("Did you remember to enter a birth year between 2000 and 2011? \n Please try again!")
