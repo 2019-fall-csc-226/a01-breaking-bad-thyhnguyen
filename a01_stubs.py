@@ -10,6 +10,9 @@
 ######################################################################
 # Acknowledgements:
 #   Original Author: Dr. Scott Heggen
+# Citation about List: http://cs.berea.edu/courses/csc226book/lists.html
+# Citation about List: http://cs.berea.edu/courses/csc226book/lists_part_b.html
+
 ######################################################################
 
 # Remember to read the detailed notes about each task in the A01 document.
@@ -17,7 +20,7 @@
 ######################################################################
 # (Required) Task 1
 # TODO Ask user for their birth year
-from time import sleep
+from time import sleep      # Import the sleep module to make the codes fancier.
 print ("\nDo you want to know more about yourself? ")
 thyhnguyen = input( "If yes, can you tell me when were you born? [Your year of birth needs to be between 2000 and 2011] ")
 sleep(1)
@@ -27,15 +30,18 @@ sleep(1)
 #This is my third way to solve the problem
 print()
 thy = ["Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit"]
-try:
+# Created a list containing all Chinese Zodiac animals, since the last two digits of the birth year (which is saved in thyhnguyen) will be corresponding to the order of the item in the list.
+# Citation about List: http://cs.berea.edu/courses/csc226book/lists.html
+# Citation about List: http://cs.berea.edu/courses/csc226book/lists_part_b.html
+try: #This try and except helps check whether thyhnguyen can be successfully transferred to an integer or not
     a = int(thyhnguyen)
     thuy = int(thyhnguyen[-2:])
     if 2000 <= int(thyhnguyen) <= 2011:
-        print("What a surprise! Your Chinese Zodiac animal is a", thy[thuy], ".")
+        print("What a surprise! Your Chinese Zodiac animal is a",thy[thuy],".")
     else:
         print("Can you please enter the birth year between 2000 and 2011? \nRe-enter your birth year to see the surprise!")
     sleep(3)
-except ValueError:
+except ValueError: #When the user inputs a float, or a string, it will go to this condition
     print("Can you please enter the birth year between 2000 and 2011? \nRe-enter your birth year to see the surprise!")
 
 """
@@ -79,15 +85,18 @@ print()
     # TODO Similar to above, check your friend's year using if conditionals, and print the correct animal for that year
 
 # This is my fourth way to solve this problem
-try:
+try: #try and except, once again, checks to see whether birth_year can be successfully transferred to be an integer
     b = int(birth_year)
     thyy = int(birth_year[-2:])
+# Citation: http://cs.berea.edu/courses/csc226book/lists.html
+# Citation: http://cs.berea.edu/courses/csc226book/lists_part_b.html
+
     if 2000 <= int(birth_year) <= 2011:
-        for i in range(12):
+        for i in range(12): #loop 12 times
             if i == thyy:
-                print("Your friend's Chinese Zodiac animal is a", thy[i])
-            if i != thyy:
-                i+=1
+                print("Your friend's Chinese Zodiac animal is a", thy[i],".") #Since the last 2 digits of birth_year is corresponding to the order of the item in the list
+            else: # if i != thyy - it means that if i is not equal to thyy:
+                i+=1 #if the last 2 digits of birth_year is not equals to the time of looping, loop again.
     else:
         print("Did you remember to enter a birth year between 2000 and 2011? \nPlease try again!")
 except ValueError:
